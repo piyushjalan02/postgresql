@@ -1,0 +1,38 @@
+#For Enter in the Postgressql Console:
+ 
+   " cd /usr/lib/postgresql/bin "  (Path is as per installation directory)
+   " sudo -i -u postgres " (Default User for postgresql) 
+   " psql "
+   
+#For lisiting all the databases:-
+
+   " \l "
+   
+#For Create the new database:-
+
+  " CREATE DATABASE databasename "
+  
+#For Create a New User(Role):-
+
+  " CREATE USER username WITH password 'password'; "
+  
+#For Creating a database with a specific user privileges:-
+
+  " CREATE DATABASE databasename WITH OWNER username; "
+  
+#For selecting the specific database to work upon:-
+
+  " \c databasename "
+  
+#For creating a new table in selected database:- 
+
+ " CREATE TABLE tablename
+ (  variable1 data_type, variable2 data_type ); "
+ 
+#For inserting data into the table:-
+
+  " INSERT INTO tablename (colume1,colume2....) VALUES (value1, value2....); " 
+  
+#For update a database with given .sql file:-
+
+   " psql database < file_name.sql "
