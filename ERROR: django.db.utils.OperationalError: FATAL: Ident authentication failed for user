@@ -1,0 +1,16 @@
+Default User for Postgresql is Postgres.
+
+Configuration Files Directory is:
+
+     /var/lib/pgsql/9.1/data
+
+nano pg_hba.conf    (ERROR: django.db.utils.OperationalError: FATAL: Ident authentication failed for user)
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+# IPv4 local connections:
+host    all             all             127.0.0.1/32        md5     (By Default ident)
+# IPv6 local connections:
+host    all             all             ::1/128                 md5     (By Default ident)
+
+## This will resolve Ident Error for Django.
